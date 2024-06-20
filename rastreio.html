@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="rastreio.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="shortcut icon"
+      href="img/entrega-rapida.png"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DropFleet</title>
+  </head>
+  <body>
+    <button id="add-button" class="material-symbols-outlined">add</button>  
+    <div class="search-container">
+      <div class="search">
+        <label for="searchInput">
+          <span class="material-symbols-outlined"> search </span>
+        </label>
+        <input type="text" id="searchInput" placeholder="Pesquisar" />
+      </div>
+      <select id="statusFilter">
+        <option value="">All</option>
+        <option value="Entregue">Entregue</option>
+        <option value="Aguardando liberação">Aguardando Liberação</option>
+        <option value="Em transito">Em Trânsito</option>
+        <option value="Aguardando retirada">Aguardando Retirada</option>
+        <option value="Postado">Postado</option>
+      </select>
+    </div>
+    <div class="container">
+      <ul id="rastreios"></ul>
+    </div>
+    <div class="modal-container">
+      <form id="add-tracking">
+        <button id="close" class="material-symbols-outlined">Close</button>
+        <label for="add-company">Id da Empresa</label>
+        <input id="add-company" name="add-company" type="text">
+          <label for="add-id">Id de Rastreio</label>
+             <input id="add-id" name="add-id" type="text">
+         <label for="add-post">Data da Postagem</label>
+              <input id="add-post" name="add-post" type="text">
+          <label for="add-delivery">Data de Entrega</label> 
+              <input id="add-delivery" name="add-delivery" type="text">  
+          <button id="add-form" type="submit">Adicionar</button>  
+      </form>
+    </div>
+    <script src="rastreio.js"></script>
+  </body>
+</html>
